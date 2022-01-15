@@ -7,6 +7,7 @@ const app = express()
 
 import {fileReader} from "./middlewares/model.js"
 
+app.use(express.json())
 app.use(fileReader)
 
 // routes import
@@ -18,14 +19,10 @@ app.use("/users", userRouter)
 app.use("/auth", authRouter)
 
 
-
 app.use((error, req, res, next) => {
 	res.json({
 		message: error.message
 	})
 })
-
-
-
 
 app.listen(PORT, () => console.log("Server is running on http://localhost:" + PORT))

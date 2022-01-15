@@ -1,6 +1,7 @@
 import fs from "fs"
 import path from "path"
 import sha256 from "sha256"
+import {sign} from "../utils/jwt.js"
 
 export const REGISTER = (req, res, next) => {
 	try {
@@ -62,7 +63,8 @@ export const REGISTER = (req, res, next) => {
 		delete newUser.password
 		return res.status(201).json({
 			message: "User muvaffaqiyatli ro'yxatdan o'tdi!",
-			user: newUser
+			user: newUser,
+			token: sign({userId: newUser.userId, agent: req.headers['user-agent']})
 		})
 
 	}catch(error) {
@@ -71,8 +73,33 @@ export const REGISTER = (req, res, next) => {
 }
 
 export const LOGIN = (req, res, next) => {
-	try {
-		//...
+	try {	
+		let {username, password} = req.body
+
+		username = username ? username.trim(): username
+		password = password ? password.trim(): password
+
+		if(!username || !password) {
+			throw new Error ("username yoki password kiritilmagan!")
+		}
+
+		const users = req.select("users")
+
+		const found = users.find(user => user.username == username && user.password == sha256(password))
+
+		if(!found) {
+			throw new Error ("username yoki password xato!")
+		}
+
+		delete found.password
+		return res.status(201).json({
+			message: "User muvaffaqiyatli tasdiqlandi!",
+			user: found,
+			token: sign({userId: found.userId, agent: req.headers['user-agent']})
+		})
+
+
+
 	} catch(error) {
 		return next(error)
 	}
