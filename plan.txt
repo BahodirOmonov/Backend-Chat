@@ -1,1 +1,54 @@
-plan.txt
+packages
+	* express
+	* multer
+	* sha256
+	* jsonwebtoken
+	* joi
+
+
+/data-model
+	users (userId, username, password, userImage)
+	messages (messageId, userId, messageType, messageDate, messageText, sendUserId)
+
+	users {
+		userId: 1,
+		username: "Bahodir",
+		password: "66b75cf3083ed91da13750340c912e262202a5f0bfc81e6bb94230e9b80a036e",
+		userImage: "/images/avatar.jpg"
+	}
+
+	messages {
+		messageId: 1,
+		userId: 1,
+		messageType: "text",
+		messageDate: "2022-01-15T00:31:32.278Z",
+		messageText: "Assalomu alaykum",
+		sendUserId: 2
+	}
+
+	one to one
+	one to many
+	many to many
+
+
+
+/routing
+	/users
+		GET /												(public)
+		GET /:userId  (filter)								(public)
+		PUT /         (newImage, username, password)		(private)
+		DELETE /      (userId)								(private)
+
+	/auth
+		POST /register       (username, password, image)	(public)
+		POST /login       (username, password)				(public)
+
+	/messages
+		GET /         (filter(userId, sendUserId, messageType))  (private)
+		GET /:messageId  (filter)								 (private)
+		POST /        (userId, messageType, messageDate, messageText, sendUserId) (private)
+
+
+/controller
+
+

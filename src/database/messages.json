@@ -1,0 +1,34 @@
+[
+	{
+		"messageId": 1,
+		"userId": 1,
+		"messageType": "text",
+		"messageDate": "2022-01-15T00:31:32.278Z",
+		"messageText": "Assalomu alaykum",
+		"sendUserId": 2
+	},
+	{
+		"messageId": 1,
+		"userId": 1,
+		"messageType": "audio",
+		"messageDate": "2022-01-15T00:31:32.278Z",
+		"messageText": "/audios/ovoz.mp3",
+		"sendUserId": 3
+	},
+	{
+		"messageId": 2,
+		"userId": 1,
+		"messageType": "image",
+		"messageDate": "2022-01-15T00:31:32.278Z",
+		"messageText": "/images/picture.jpg",
+		"sendUserId": 1
+	},
+	{
+		"messageId": 1,
+		"userId": 1,
+		"messageType": "file",
+		"messageDate": "2022-01-15T00:31:32.278Z",
+		"messageText": "/files/file.txt",
+		"sendUserId": 3
+	},
+]

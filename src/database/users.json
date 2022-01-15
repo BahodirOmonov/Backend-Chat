@@ -1,0 +1,30 @@
+[
+    {
+        "userId": 1,
+        "username": "Bahodir",
+        "password": "66b75cf3083ed91da13750340c912e262202a5f0bfc81e6bb94230e9b80a036e",
+        "userImage": "/images/avatar.jpg",
+        "userDate": "2022-11-02"
+    },
+    {
+        "userId": 2,
+        "username": "Dostonbek",
+        "password": "66b75cf3083ed91da13750340c912e262202a5f0bfc81e6bb94230e9b80a036e",
+        "userImage": "/images/man.jpg",
+        "userDate": "2022-11-02"
+    },
+    {
+        "userId": 3,
+        "username": "Dilshod",
+        "password": "55ea7c72b5fc3b7224ce05f163d6d066256d087b8338a5d848136ebe59251a81",
+        "userImage": "/images/1642214244775window11image.jpg",
+        "userDate": "2022-01-15T02:37:24.895Z"
+    },
+    {
+        "userId": 4,
+        "username": "Begzod",
+        "password": "66b75cf3083ed91da13750340c912e262202a5f0bfc81e6bb94230e9b80a036e",
+        "userImage": "/images/1642214480256window-11background.jpg",
+        "userDate": "2022-01-15T02:41:20.280Z"
+    }
+]
