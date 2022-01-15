@@ -1,0 +1,13 @@
+{
+  "name": "backend-chat",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js"
+  },
+  "keywords": [],
+  "author": "Bahodir Omonov",
+  "license": "ISC"
+}
